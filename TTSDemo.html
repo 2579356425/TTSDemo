@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>TTS实验结果</title>
+    <style>
+        body {
+            margin: 0% 15% 0% 10%;
+            padding: 50px 30px;
+            background: #fff;
+            color: #111;
+            font-size: 17px;
+            font-family: sans-serif;
+            font-weight: 400;
+            line-height: 1.8;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1 {
+            font-size: 1.75em;
+        }
+
+        h2 {
+            margin-bottom: 0.4em;
+        }
+
+        hr {
+            width: 110%;
+            height: 0.5px;
+            border-width: 0;
+            color: lightgray;
+            background-color: lightgray
+        }
+
+        table {
+            width: 110%;
+        }
+
+        audio {
+            vertical-align:middle;
+            width: 100%;
+        }
+
+        div {
+            width: 110%;
+        }
+    </style>
+</head>
+<body>
+<h1>探究语料时长对合成语音的影响</h1>
+<div>
+    <b>数据集：(1).标贝开源数据集CSMSC_12h，有效时长约12小时，260个音素。</b><br/>
+    <b style="margin-left: 68px;">(2).精选标贝开源数据集CSMSC_4h，有效时长约4小时，260个音素。</b><br/>
+    <b style="margin-left: 68px;">(3).精选标贝开源数据集CSMSC_0.5h，有效时长约0.5小时，210个音素。</b>
+</div>
+<div>
+    <b>音频参数：所有音频均为无压缩wav格式，采样率为48KHz、16bit，单声道。</b>
+</div>
+<div>
+    <b>声码器：所有合成语音使用的声码器均为CSMSC_12h训练的Parallel WaveGAN。</b>
+</div>
+<hr>
+<table border="1">
+    <tr style="height: 50px;">
+        <th style="text-align: center">文本</th>
+        <th style="text-align: center">CSMSC_12h训练<br/>FastSpeech2</th>
+        <th style="text-align: center">CSMSC_4h训练<br/>FastSpeech2</th>
+        <th style="text-align: center">CSMSC_0.5h训练<br/>FastSpeech2</th>
+    </tr>
+    <tr>
+        <td style="width: 270px;">
+            <em controls="controls">
+                凯莫瑞安联合体的经济崩溃，迫在眉睫。
+            </em>
+        </td>
+        <td style="width: 200px;">
+            <audio controls="controls">
+                <source src="wav/CSMSC数据训练FastSpeech2 & ParallelWaveGAN/凯莫瑞安联合体的经济崩溃，迫在眉睫。.wav" autoplay>
+            </audio>
+        </td>
+        <td style="width: 200px;">
+            <audio controls="controls">
+                <source src="wav/FastSpeech2_CSMSC3500 + ParallelWaveGAN_CSMSC/凯莫瑞安联合体的经济崩溃，迫在.wav" autoplay>
+            </audio>
+        </td>
+        <td style="width: 200px;">
+            <audio controls="controls">
+                <source src="wav/FastSpeech2_CSMSC400 + ParallelWaveGAN_CSMSC/凯莫瑞安联合体的经济崩溃，迫在.wav" autoplay>
+            </audio>
+        </td>
+    </tr>
+    <tr>
+        <td style="width: 160px;">
+            <em controls="controls">
+                对于所有想要离开那片废土，去寻找更美好生活的人来说。
+            </em>
+        </td>
+        <td style="width: 200px;">
+            <audio controls="controls">
+                <source src="wav/CSMSC数据训练FastSpeech2 & ParallelWaveGAN/对于所有想要离开那片废土，去寻找更美好生活的人来说。.wav" autoplay>
+            </audio>
+        </td>
+        <td style="width: 200px;">
+            <audio controls="controls">
+                <source src="wav/FastSpeech2_CSMSC3500 + ParallelWaveGAN_CSMSC/对于所有想要离开那片废土，去寻.wav" autoplay>
+            </audio>
+        </td>
+        <td style="width: 200px;">
+            <audio controls="controls">
+                <source src="wav/FastSpeech2_CSMSC400 + ParallelWaveGAN_CSMSC/对于所有想要离开那片废土，去寻.wav" autoplay>
+            </audio>
+        </td>
+    </tr>
+    <tr>
+        <td style="width: 160px;">
+            <em controls="controls">
+                克哈，是你们所有人安全的港湾。
+            </em>
+        </td>
+        <td style="width: 200px;">
+            <audio controls="controls">
+                <source src="wav/CSMSC数据训练FastSpeech2 & ParallelWaveGAN/克哈，是你们所有人安全的港湾。.wav" autoplay>
+            </audio>
+        </td>
+        <td style="width: 200px;">
+            <audio controls="controls">
+                <source src="wav/FastSpeech2_CSMSC3500 + ParallelWaveGAN_CSMSC/克哈，是你们所有人安全的港湾。.wav" autoplay>
+            </audio>
+        </td>
+        <td style="width: 200px;">
+            <audio controls="controls">
+                <source src="wav/FastSpeech2_CSMSC400 + ParallelWaveGAN_CSMSC/克哈，是你们所有人安全的港湾。.wav" autoplay>
+            </audio>
+        </td>
+    </tr>
+    <tr>
+        <td style="width: 160px;">
+            <em controls="controls">
+                为了保护尤摩扬人民不受异虫的残害，我所做的，比他们自己的领导委员会都多。
+            </em>
+        </td>
+        <td style="width: 200px;">
+            <audio controls="controls">
+                <source src="wav/CSMSC数据训练FastSpeech2 & ParallelWaveGAN/为了保护尤摩扬人民不受异虫的残害，我所做的，比他们自己的领导委员会都多。.wav" autoplay>
+            </audio>
+        </td>
+        <td style="width: 200px;">
+            <audio controls="controls">
+                <source src="wav/FastSpeech2_CSMSC3500 + ParallelWaveGAN_CSMSC/为了保护尤摩扬人民不受异虫的残.wav" autoplay>
+            </audio>
+        </td>
+        <td style="width: 200px;">
+            <audio controls="controls">
+                <source src="wav/FastSpeech2_CSMSC400 + ParallelWaveGAN_CSMSC/为了保护尤摩扬人民不受异虫的残.wav" autoplay>
+            </audio>
+        </td>
+    </tr>
+    <tr>
+        <td style="width: 160px;">
+            <em controls="controls">
+                无论他们如何诽谤我，我将继续为所有泰伦人的最大利益，而努力奋斗。
+            </em>
+        </td>
+        <td style="width: 200px;">
+            <audio controls="controls">
+                <source src="wav/CSMSC数据训练FastSpeech2 & ParallelWaveGAN/无论他们如何诽谤我，我将继续为所有泰伦人的最大利益，而努力奋斗。.wav" autoplay>
+            </audio>
+        </td>
+        <td style="width: 200px;">
+            <audio controls="controls">
+                <source src="wav/FastSpeech2_CSMSC3500 + ParallelWaveGAN_CSMSC/无论他们如何诽谤我，我将继续为.wav" autoplay>
+            </audio>
+        </td>
+        <td style="width: 200px;">
+            <audio controls="controls">
+                <source src="wav/FastSpeech2_CSMSC400 + ParallelWaveGAN_CSMSC/无论他们如何诽谤我，我将继续为.wav" autoplay>
+            </audio>
+        </td>
+    </tr>
+    <tr>
+        <td style="width: 160px;">
+            <em controls="controls">
+                身为你们的元首，我带领泰伦人实现了人类统治领地和经济的扩张。
+            </em>
+        </td>
+        <td style="width: 200px;">
+            <audio controls="controls">
+                <source src="wav/CSMSC数据训练FastSpeech2 & ParallelWaveGAN/身为你们的元首，我带领泰伦人实现了人类统治领地和经济的扩张。.wav" autoplay>
+            </audio>
+        </td>
+        <td style="width: 200px;">
+            <audio controls="controls">
+                <source src="wav/FastSpeech2_CSMSC3500 + ParallelWaveGAN_CSMSC/身为你们的元首，我带领泰伦人实.wav" autoplay>
+            </audio>
+        </td>
+        <td style="width: 200px;">
+            <audio controls="controls">
+                <source src="wav/FastSpeech2_CSMSC400 + ParallelWaveGAN_CSMSC/身为你们的元首，我带领泰伦人实.wav" autoplay>
+            </audio>
+        </td>
+    </tr>
+    <tr>
+        <td style="width: 160px;">
+            <em controls="controls">
+                我们将继续成长，用行动回击那些只会说风凉话，不愿意和我们相向而行的害群之马。
+            </em>
+        </td>
+        <td style="width: 200px;">
+            <audio controls="controls">
+                <source src="wav/CSMSC数据训练FastSpeech2 & ParallelWaveGAN/我们将继续成长，用行动回击那些只会说风凉话，不愿意和我们相向而行的害群之马。.wav" autoplay>
+            </audio>
+        </td>
+        <td style="width: 200px;">
+            <audio controls="controls">
+                <source src="wav/FastSpeech2_CSMSC3500 + ParallelWaveGAN_CSMSC/我们将继续成长，用行动回击那些.wav" autoplay>
+            </audio>
+        </td>
+        <td style="width: 200px;">
+            <audio controls="controls">
+                <source src="wav/FastSpeech2_CSMSC400 + ParallelWaveGAN_CSMSC/我们将继续成长，用行动回击那些.wav" autoplay>
+            </audio>
+        </td>
+    </tr>
+    <tr>
+        <td style="width: 160px;">
+            <em controls="controls">
+                帝国武装力量，无数的优秀儿女，正时刻守卫着我们的家园大门，但是他们孤木难支。
+            </em>
+        </td>
+        <td style="width: 200px;">
+            <audio controls="controls">
+                <source src="wav/CSMSC数据训练FastSpeech2 & ParallelWaveGAN/帝国武装力量，无数的优秀儿女，正时刻守卫着我们的家园大门，但是他们孤木难支。.wav" autoplay>
+            </audio>
+        </td>
+        <td style="width: 200px;">
+            <audio controls="controls">
+                <source src="wav/FastSpeech2_CSMSC3500 + ParallelWaveGAN_CSMSC/帝国武装力量，无数的优秀儿女，.wav" autoplay>
+            </audio>
+        </td>
+        <td style="width: 200px;">
+            <audio controls="controls">
+                <source src="wav/FastSpeech2_CSMSC400 + ParallelWaveGAN_CSMSC/帝国武装力量，无数的优秀儿女，.wav" autoplay>
+            </audio>
+        </td>
+    </tr>
+    <tr>
+        <td style="width: 160px;">
+            <em controls="controls">
+                凡是今天应征入伍者，所获的所有刑罚罪责，减半。
+            </em>
+        </td>
+        <td style="width: 200px;">
+            <audio controls="controls">
+                <source src="wav/CSMSC数据训练FastSpeech2 & ParallelWaveGAN/凡是今天应征入伍者，所获的所有刑罚罪责，减半。.wav" autoplay>
+            </audio>
+        </td>
+        <td style="width: 200px;">
+            <audio controls="controls">
+                <source src="wav/FastSpeech2_CSMSC3500 + ParallelWaveGAN_CSMSC/凡是今天应征入伍者，所获的所有.wav" autoplay>
+            </audio>
+        </td>
+        <td style="width: 200px;">
+            <audio controls="controls">
+                <source src="wav/FastSpeech2_CSMSC400 + ParallelWaveGAN_CSMSC/凡是今天应征入伍者，所获的所有.wav" autoplay>
+            </audio>
+        </td>
+    </tr>
+</table>
+<hr>
+<div>
+    <b>结论：CSMSC_12h对比CSMSC_4h和CSMSC_0.5h，说明了音素个数相同时语音时长对合成语音质量影响不大，
+        主要为音高、音素发音时长以及音量的微小差距，且语音时长越少，语音质量差距越大。</b>
+</div>
+<hr>
+<h1>探究音素个数对合成语音的影响</h1>
+<div>
+    <b>数据集：(1).精选标贝开源数据集CSMSC_4h，有效时长约4小时，260个音素。</b><br/>
+    <b style="margin-left: 68px;">(2).有声书配音员数据集NANA_4h，有效时长约4小时，120个音素。</b>
+</div>
+<div>
+    <b>音频参数：所有音频均为无压缩wav格式，采样率为48KHz、16bit，单声道。</b>
+</div>
+<div>
+    <b>声码器：所有合成语音使用的声码器均为CSMSC_12h训练的Parallel WaveGAN。</b>
+</div>
+<hr>
+<table border="1">
+    <tr style="height: 50px;">
+        <th style="text-align: center">文本</th>
+        <th style="text-align: center">CSMSC_4h训练FastSpeech2</th>
+        <th style="text-align: center">NANA_4h训练FastSpeech2</th>
+    </tr>
+    <tr>
+        <td style="width: 250px;">
+            <em controls="controls">
+                凯莫瑞安联合体的经济崩溃，迫在眉睫。
+            </em>
+        </td>
+        <td style="width: 200px;">
+            <audio controls="controls">
+                <source src="wav/FastSpeech2_CSMSC3500 + ParallelWaveGAN_CSMSC/凯莫瑞安联合体的经济崩溃，迫在.wav" autoplay>
+            </audio>
+        </td>
+        <td style="width: 200px;">
+            <audio controls="controls">
+                <source src="wav/FastSpeech2_NANA4320+ParallelWaveGAN_CSMSC/凯莫瑞安联合体的经济崩溃，迫在.wav" autoplay>
+            </audio>
+        </td>
+    </tr>
+    <tr>
+        <td style="width: 160px;">
+            <em controls="controls">
+                对于所有想要离开那片废土，去寻找更美好生活的人来说。
+            </em>
+        </td>
+        <td style="width: 200px;">
+            <audio controls="controls">
+                <source src="wav/FastSpeech2_CSMSC3500 + ParallelWaveGAN_CSMSC/对于所有想要离开那片废土，去寻.wav" autoplay>
+            </audio>
+        </td>
+        <td style="width: 200px;">
+            <audio controls="controls">
+                <source src="wav/FastSpeech2_NANA4320+ParallelWaveGAN_CSMSC/对于所有想要离开那片废土，去寻.wav" autoplay>
+            </audio>
+        </td>
+    </tr>
+    <tr>
+        <td style="width: 160px;">
+            <em controls="controls">
+                克哈，是你们所有人安全的港湾。
+            </em>
+        </td>
+        <td style="width: 200px;">
+            <audio controls="controls">
+                <source src="wav/FastSpeech2_CSMSC3500 + ParallelWaveGAN_CSMSC/克哈，是你们所有人安全的港湾。.wav" autoplay>
+            </audio>
+        </td>
+        <td style="width: 200px;">
+            <audio controls="controls">
+                <source src="wav/FastSpeech2_NANA4320+ParallelWaveGAN_CSMSC/克哈，是你们所有人安全的港湾。.wav" autoplay>
+            </audio>
+        </td>
+    </tr>
+    <tr>
+        <td style="width: 160px;">
+            <em controls="controls">
+                为了保护尤摩扬人民不受异虫的残害，我所做的，比他们自己的领导委员会都多。
+            </em>
+        </td>
+        <td style="width: 200px;">
+            <audio controls="controls">
+                <source src="wav/FastSpeech2_CSMSC3500 + ParallelWaveGAN_CSMSC/为了保护尤摩扬人民不受异虫的残.wav" autoplay>
+            </audio>
+        </td>
+        <td style="width: 200px;">
+            <audio controls="controls">
+                <source src="wav/FastSpeech2_NANA4320+ParallelWaveGAN_CSMSC/为了保护尤摩扬人民不受异虫的残.wav" autoplay>
+            </audio>
+        </td>
+    </tr>
+    <tr>
+        <td style="width: 160px;">
+            <em controls="controls">
+                无论他们如何诽谤我，我将继续为所有泰伦人的最大利益，而努力奋斗。
+            </em>
+        </td>
+        <td style="width: 200px;">
+            <audio controls="controls">
+                <source src="wav/FastSpeech2_CSMSC3500 + ParallelWaveGAN_CSMSC/无论他们如何诽谤我，我将继续为.wav" autoplay>
+            </audio>
+        </td>
+        <td style="width: 200px;">
+            <audio controls="controls">
+                <source src="wav/FastSpeech2_NANA4320+ParallelWaveGAN_CSMSC/无论他们如何诽谤我，我将继续为.wav" autoplay>
+            </audio>
+        </td>
+    </tr>
+    <tr>
+        <td style="width: 160px;">
+            <em controls="controls">
+                身为你们的元首，我带领泰伦人实现了人类统治领地和经济的扩张。
+            </em>
+        </td>
+        <td style="width: 200px;">
+            <audio controls="controls">
+                <source src="wav/FastSpeech2_CSMSC3500 + ParallelWaveGAN_CSMSC/身为你们的元首，我带领泰伦人实.wav" autoplay>
+            </audio>
+        </td>
+        <td style="width: 200px;">
+            <audio controls="controls">
+                <source src="wav/FastSpeech2_NANA4320+ParallelWaveGAN_CSMSC/身为你们的元首，我带领泰伦人实.wav" autoplay>
+            </audio>
+        </td>
+    </tr>
+    <tr>
+        <td style="width: 160px;">
+            <em controls="controls">
+                我们将继续成长，用行动回击那些只会说风凉话，不愿意和我们相向而行的害群之马。
+            </em>
+        </td>
+        <td style="width: 200px;">
+            <audio controls="controls">
+                <source src="wav/FastSpeech2_CSMSC3500 + ParallelWaveGAN_CSMSC/我们将继续成长，用行动回击那些.wav" autoplay>
+            </audio>
+        </td>
+        <td style="width: 200px;">
+            <audio controls="controls">
+                <source src="wav/FastSpeech2_NANA4320+ParallelWaveGAN_CSMSC/我们将继续成长，用行动回击那些.wav" autoplay>
+            </audio>
+        </td>
+    </tr>
+    <tr>
+        <td style="width: 160px;">
+            <em controls="controls">
+                帝国武装力量，无数的优秀儿女，正时刻守卫着我们的家园大门，但是他们孤木难支。
+            </em>
+        </td>
+        <td style="width: 200px;">
+            <audio controls="controls">
+                <source src="wav/FastSpeech2_CSMSC3500 + ParallelWaveGAN_CSMSC/帝国武装力量，无数的优秀儿女，.wav" autoplay>
+            </audio>
+        </td>
+        <td style="width: 200px;">
+            <audio controls="controls">
+                <source src="wav/FastSpeech2_NANA4320+ParallelWaveGAN_CSMSC/帝国武装力量，无数的优秀儿女，.wav" autoplay>
+            </audio>
+        </td>
+    </tr>
+    <tr>
+        <td style="width: 160px;">
+            <em controls="controls">
+                凡是今天应征入伍者，所获的所有刑罚罪责，减半。
+            </em>
+        </td>
+        <td style="width: 200px;">
+            <audio controls="controls">
+                <source src="wav/FastSpeech2_CSMSC3500 + ParallelWaveGAN_CSMSC/凡是今天应征入伍者，所获的所有.wav" autoplay>
+            </audio>
+        </td>
+        <td style="width: 200px;">
+            <audio controls="controls">
+                <source src="wav/FastSpeech2_NANA4320+ParallelWaveGAN_CSMSC/凡是今天应征入伍者，所获的所有.wav" autoplay>
+            </audio>
+        </td>
+    </tr>
+</table>
+<hr>
+<div>
+    <b>结论：CSMSC_4h对比NANA_4h，说明了音素个数对合成语音质量影响较大，音素个数太少会出现大量漏读、错读的情况。</b>
+</div>
+<hr>
+</body>
+</html>
